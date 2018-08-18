@@ -30,10 +30,10 @@
 
 * [x] create-react-app
   * [x] Remove un-needed things
-* [ ] Player 1 Chooses a pawn
-* [ ] Player 2 Chooses a pawn
-* [ ] Generate game board
-* [ ] Pawns start at "Rest from JavaScript Fatigue" square
+* [x] Player 1 Chooses a pawn
+* [x] Player 2 Chooses a pawn
+* [x] Generate game board
+* [x] Pawns start at "Rest from JavaScript Fatigue" square
 * [ ] Alternate between players
   * [ ] Dice roll
   * [ ] Move forward

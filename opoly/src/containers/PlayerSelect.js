@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Players from '../components/Players';
+
 class PlayerSelect extends Component {
   state = {
     pawns: ['angular', 'js', 'react', 'vue'],
@@ -9,39 +11,36 @@ class PlayerSelect extends Component {
   };
 
   setPlayer = (pawn) => {
-    this.setState((prevState) => ({
-      currentPlayerSelect: prevState.currentPlayerSelect + 1,
-      players: [
-        ...prevState.players, {
-          number: prevState.currentPlayerSelect,
-          pawn
-        }
-      ],
-      readyToStart: prevState.currentPlayerSelect === 2 ? true : false
-    }));
+    if (this.state.players.find(player => player.pawn === pawn)) {
+      alert('Looks like you 2 know whats best. No need to play!');
+      window.location.href = 'https://www.youtube.com/watch?v=7-meqTM6arI';
+    } else {
+      this.setState((prevState) => ({
+        currentPlayerSelect: prevState.currentPlayerSelect + 1,
+        players: [
+          ...prevState.players, {
+            number: prevState.currentPlayerSelect,
+            pawn
+          }
+        ],
+        readyToStart: prevState.currentPlayerSelect === 2 ? true : false
+      }));
+    }
+  }
+
+  startGame = () => {
+    this.props.startGame(this.state.players);
   }
 
   render() {
     return (
       <div>
-        <div className="players">
-          {
-            this.state.players.map(player => (
-              <div key={player.number} className="player">
-                <p>Player {player.number}</p>
-                <img
-                  className="player-pawn"
-                  alt={player.pawn}
-                  src={`./pawns/${player.pawn}-pawn.png`} />
-              </div>
-            ))
-          }
-        </div>
+        <Players players={this.state.players} />
         {
           this.state.readyToStart ?
           <React.Fragment>
             <h1>Click start to begin!</h1>
-            <button className="start-button">Start</button>
+            <button onClick={this.startGame} className="button">Start</button>
           </React.Fragment> :
           <React.Fragment>
             <h1>Player {this.state.currentPlayerSelect}, select a pawn:</h1>
@@ -55,7 +54,7 @@ class PlayerSelect extends Component {
                   <img
                     className="pawn-logo"
                     alt={pawn}
-                    src={`./logos/${pawn}.png`} />
+                    src={`./images/${pawn}.png`} />
                 </div>
               ))
             }
