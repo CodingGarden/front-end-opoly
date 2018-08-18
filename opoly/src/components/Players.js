@@ -1,11 +1,15 @@
 import React from 'react';
 
-const Players = ({ players }) => (
+const Players = ({ players, showSmoke }) => (
   <div className="players">
     {
       players.map(player => (
         <div key={player.number} className="player">
           <p>Player {player.number}</p>
+          {showSmoke && <img
+            className="smoke"
+            height="250px"
+            src="./images/smoke.png"/>}
           <img
             className="player-pawn"
             alt={player.pawn}

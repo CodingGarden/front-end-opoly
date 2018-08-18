@@ -1,115 +1,133 @@
 .App {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%);
 }
 
 .pawn-container {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pawn, .player-pawn {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
 }
 
 .pawn-logo {
-  width: 70px;
-  height: auto;
+    width: 70px;
+    height: auto;
 }
 
 .pawn:hover {
-  transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.smoke {
+    position: absolute;
+    transform: translate(-65px, -75px);
+    animation: smoke-dissolve 1.5s ease forwards;
+}
+
+@keyframes smoke-dissolve {
+    from {
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 .players {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .player p {
-  font-family: 'BioRhyme', serif;
-  text-align: center;
+    font-family: 'BioRhyme', serif;
+    text-align: center;
 }
 
 .player-score {
-  font-size: 3em;
+    font-size: 3em;
 }
 
 .button {
-  margin: auto;
-  text-align: center;
-  position: relative;
-  display: block;
-  height: 100px;
-  width: 300px;
-  background-color: blue;
-  color: white;
-  padding: 20px;
-  border: 8px solid black;
-  font-family: 'BioRhyme', serif;
-  font-size: 3em;
-  line-height: 1em;
-  text-transform: uppercase;
-  cursor: pointer;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    display: block;
+    height: 100px;
+    width: 300px;
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    border: 8px solid black;
+    font-family: 'BioRhyme', serif;
+    font-size: 3em;
+    line-height: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .button:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .game-board {
-  width: 60vw;
-  height: 60vw;
-  max-width: 80vh;
-  max-height: 80vh;
-  display: grid;
+    width: 60vw;
+    height: 60vw;
+    max-width: 80vh;
+    max-height: 80vh;
+    display: grid;
 }
 
 .game-square {
-  text-align: center;
-  color: white;
-  background: black;
-  outline: 2px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    text-align: center;
+    color: white;
+    background: black;
+    outline: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-square img {
-  width: 80%;
-  height: auto;
+    width: 80%;
+    height: auto;
 }
 
 .player-avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .player-avatar .pawn {
-  width: 50px;
-  height: auto;
+    width: 50px;
+    height: auto;
 }
 
 .board-middle {
-  grid-column: 2 / -2;
-  grid-row: 2 / -2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: white;
+    grid-column: 2 / -2;
+    grid-row: 2 / -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
 }
 
 .rolled-die {
-  font-size: 10em;
+    font-size: 10em;
 }

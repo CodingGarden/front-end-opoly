@@ -35,7 +35,7 @@ class PlayerSelect extends Component {
   render() {
     return (
       <div>
-        <Players players={this.state.players} />
+        <Players showSmoke players={this.state.players} />
         {
           this.state.readyToStart ?
           <React.Fragment>
