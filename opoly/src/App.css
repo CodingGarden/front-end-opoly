@@ -5,10 +5,58 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to bottom, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%);
 }
 
-.pawn {
+.pawn-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pawn, .player-pawn {
   width: 100px;
   height: 100px;
   cursor: pointer;
+}
+
+.pawn-logo {
+  width: 70px;
+  height: auto;
+}
+
+.pawn:hover {
+  transform: scale(1.5);
+}
+
+.players {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player p {
+  font-family: 'BioRhyme', serif;
+  text-align: center;
+}
+
+.start-button {
+  margin: auto;
+  text-align: center;
+  position: relative;
+  display: block;
+  height: 100px;
+  width: 300px;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  border: 8px solid black;
+  font-family: 'BioRhyme', serif;
+  font-size: 3em;
+  line-height: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.start-button:hover {
+  opacity: 0.8;
 }
