@@ -5,46 +5,47 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%);
-  }
-  
-  .pawn-container {
+    background: linear-gradient(to bottom, rgba(206, 220, 231, 1) 0%, rgba(89, 106, 114, 1) 100%);
+}
+
+.pawn-container {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .pawn, .player-pawn {
+}
+
+.pawn,
+.player-pawn {
     width: 100px;
     height: 100px;
     cursor: pointer;
-  }
-  
-  .pawn-logo {
+}
+
+.pawn-logo {
     width: 70px;
     height: auto;
-  }
-  
-  .pawn:hover {
+}
+
+.pawn:hover {
     transform: scale(1.5);
-  }
-  
-  .players {
+}
+
+.players {
     width: 100%;
     display: flex;
     justify-content: space-between;
-  }
-  
-  .player p {
+}
+
+.player p {
     font-family: 'BioRhyme', serif;
     text-align: center;
-  }
-  
-  .player-score {
+}
+
+.player-score {
     font-size: 3em;
-  }
-  
-  .button {
+}
+
+.button {
     margin: auto;
     text-align: center;
     position: relative;
@@ -60,21 +61,21 @@
     line-height: 1em;
     text-transform: uppercase;
     cursor: pointer;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     opacity: 0.8;
-  }
-  
-  .game-board {
+}
+
+.game-board {
     width: 60vw;
     height: 60vw;
     max-width: 80vh;
     max-height: 80vh;
     display: grid;
-  }
-  
-  .game-square {
+}
+
+.game-square {
     text-align: center;
     color: white;
     background: black;
@@ -82,25 +83,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .game-square img {
+}
+
+.game-square img {
     width: 80%;
     height: auto;
-  }
-  
-  .player-avatar {
+}
+
+.player-avatar {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .player-avatar .pawn {
+}
+
+.player-avatar .pawn {
     width: 50px;
     height: auto;
-  }
-  
-  .board-middle {
+}
+
+.board-middle {
     grid-column: 2 / -2;
     grid-row: 2 / -2;
     display: flex;
@@ -108,12 +109,12 @@
     align-items: center;
     flex-direction: column;
     background: white;
-  }
-  
-  .rolled-die {
+}
+
+.rolled-die {
     font-size: 10em;
-  }
-  
+}
+
 .smoke {
     position: absolute;
     transform: translate(-65px, -75px);
