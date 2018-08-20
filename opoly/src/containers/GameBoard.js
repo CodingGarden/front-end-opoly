@@ -113,7 +113,8 @@ class GameBoard extends Component {
                 key={player.number}
                 style={{
                   gridRow: location.row,
-                  gridColumn: location.col
+                  gridColumn: location.col,
+                  transition: 'all 1s'
                 }}
                 className="player-avatar">
                 <img
@@ -125,7 +126,12 @@ class GameBoard extends Component {
           })
         }
         <div className="board-middle">
-          <h2>Player {this.props.currentPlayer}, Roll the die!</h2>
+          {
+            this.props.square ?
+            <h4>Player {this.props.square.player} landed on {this.props.square.type}! {this.props.square.points} Points</h4> :
+            ''
+          }
+          <h4>Player {this.props.currentPlayer}, Roll the die!</h4>
           <p className="rolled-die">{this.state.rolledNumber}</p>
           <button onClick={this.rollDie} className="button">Roll</button>
         </div>

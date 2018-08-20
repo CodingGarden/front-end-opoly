@@ -9,6 +9,7 @@ const Players = ({ players, showSmoke }) => (
           {showSmoke && <img
             className="smoke"
             height="250px"
+            alt="smoke"
             src="./images/smoke.png"/>}
           <img
             className="player-pawn"

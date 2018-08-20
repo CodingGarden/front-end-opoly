@@ -49,15 +49,15 @@
   text-align: center;
   position: relative;
   display: block;
-  height: 100px;
-  width: 300px;
+  height: 10vh;
+  width: 30vh;
   background-color: blue;
   color: white;
-  padding: 20px;
+  padding: 2vh;
   border: 8px solid black;
   font-family: 'BioRhyme', serif;
-  font-size: 3em;
-  line-height: 1em;
+  font-size: 4vh;
+  line-height: 1vh;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -69,9 +69,10 @@
 .game-board {
   width: 60vw;
   height: 60vw;
-  max-width: 80vh;
-  max-height: 80vh;
+  max-width: 70vh;
+  max-height: 70vh;
   display: grid;
+  margin-top: -10vh;
 }
 
 .game-square {
@@ -93,6 +94,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 4px solid yellow;
 }
 
 .player-avatar .pawn {
@@ -101,6 +103,8 @@
 }
 
 .board-middle {
+  /* width: 5vh;
+  height: 5vh; */
   grid-column: 2 / -2;
   grid-row: 2 / -2;
   display: flex;
@@ -108,10 +112,11 @@
   align-items: center;
   flex-direction: column;
   background: white;
+  font-size: 2vh;
 }
 
 .rolled-die {
-  font-size: 10em;
+  font-size: 20vh;
 }
 
 .smoke {
