@@ -113,3 +113,21 @@
 .rolled-die {
   font-size: 10em;
 }
+
+.smoke {
+  position: absolute;
+  transform: translate(-65px, -75px);
+  animation: smoke-dissolve 1.5s ease forwards;
+}
+
+@keyframes smoke-dissolve {
+  from {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
